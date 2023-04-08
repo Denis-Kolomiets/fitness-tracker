@@ -1,1 +1,29 @@
-<p>login works!</p>
+<section class="section-form">
+    <form fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center" [formGroup]="loginGroupForm">
+        <mat-form-field>
+            <mat-label>Your login</mat-label>
+            <input 
+              formControlName="login"
+              type="email" 
+              matInput 
+              placeholder="input login"
+              required
+              >
+              <mat-hint>Please enter valid E-mail</mat-hint>
+              <mat-error>Invalid or missing email</mat-error>
+        </mat-form-field>
+        <mat-form-field hintLabel="Should be at least 6 characters long.">
+            <mat-label>Your password</mat-label>
+            <input 
+              type="password" 
+              matInput  
+              formControlName="password"
+              minlength="6"
+              required
+              >
+              <mat-hint *ngIf="">Please enter valid password</mat-hint>
+              <mat-error>Missing password</mat-error>
+          </mat-form-field>
+          <button type="submit" mat-raised-button color="primary" [disabled]="!loginGroupForm.valid" (click)="onSubmit()">Login</button>
+    </form>
+</section>
