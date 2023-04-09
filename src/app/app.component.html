@@ -1,1 +1,25 @@
-<router-outlet></router-outlet>
+<mat-drawer-container>
+    <mat-drawer #sidenav role="navigation">Drawer content</mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar color="primary">
+            <div>
+                <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div>
+                <a routerLink="/">LOGO</a>
+            </div>
+            <div fxFlex fxLayout fxLayoutAlign="flex-end" > 
+                <ul fxLayout fxLayoutGap="15px">
+                    <li><a routerLink="/signup">Signup</a></li>
+                    <li><a routerLink="/login">Login</a></li>
+                    <li><a routerLink="/training">Training</a></li>
+                </ul>
+            </div>
+        </mat-toolbar>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-drawer-content>
+</mat-drawer-container>
