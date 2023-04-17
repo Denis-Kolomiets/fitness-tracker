@@ -17,7 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
-import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { AuthService } from './auth/auth.service';
+import { TrainingService } from './training/traning.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +46,8 @@ import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent],
   providers: [
+    AuthService,
+    TrainingService
   ]
 })
 export class AppModule { }
