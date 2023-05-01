@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ng-fitness-tracker-ddb70": {
+      "hosting": {
+        "fitness-tracker": [
+          "ng-fitness-tracker-ddb70"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ng-fitness-tracker-ddb70"
+  }
+}
